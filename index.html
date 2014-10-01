@@ -1,0 +1,550 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>math-elements</title>
+  <script src="platform/platform.js"></script>
+  <link rel="import" href="math-elements/math.html">
+  <link rel="stylesheet" href="docs/normalize.css">
+  <link rel="stylesheet" href="docs/docs.css">
+</head>
+<body>
+  <header>
+    <div class="logo">&lt;&prod;&sum;></div>
+    <h1>math-elements</h1>
+    <nav>
+      <ul>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#reference">Reference</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="https://github.com/charbelrami/math-elements">Source</a></li>
+        <li><a href="https://github.com/charbelrami/math-elements/releases">Releases</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2><a id="getting-started" href="#getting-started">Getting Started</a></h2>
+        <h3>Installation</h3>
+        <h4>Bower</h4>
+        <pre><code>$ bower install --save math-elements</code></pre>
+        <h3>Usage</h3>
+        <pre><code>&lt;!doctype html>
+&lt;html>
+  &lt;head>
+    &lt;script src="bower_components/platform/platform.js">&lt;/script>
+    &lt;link rel="import" href="bower_components/math-elements/math.html">
+  &lt;/head>
+  &lt;body>
+    &lt;math-elements>&lt;/math-elements>
+  &lt;/body>
+&lt;/html></code></pre>
+    </article>
+  <article>
+    <h2><a id="reference" href="#reference">Reference</a></h2>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>polymer-element</th>
+            <th>attributes</th>
+            <th>default values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>main container</td>
+            <td>math-elements</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>element</td>
+            <td>math-el</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>italic</td>
+            <td>math-i</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>superscript</td>
+            <td>math-super</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subscript</td>
+            <td>math-sub</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>superscript-subscript</td>
+            <td>math-super-sub</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>fraction</td>
+            <td>math-frac</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>brackets</td>
+            <td>math-brack</td>
+            <td>l, r</td>
+            <td>l: '(', r: ')'</td>
+          </tr>
+          <tr>
+            <td>limit</td>
+            <td>math-lim</td>
+            <td>v, p</td>
+            <td>v: 'x', p: 'a'</td>
+          </tr>
+          <tr>
+            <td>derivative</td>
+            <td>math-deriv</td>
+            <td>v</td>
+            <td>v: 'x'</td>
+          </tr>
+          <tr>
+            <td>partial derivative</td>
+            <td>math-par-deriv</td>
+            <td>v</td>
+            <td>v: 'x'</td>
+          </tr>
+          <tr>
+            <td>integral</td>
+            <td>math-inte</td>
+            <td>v</td>
+            <td>v: 'x'</td>
+          </tr>
+          <tr>
+            <td>definite integral</td>
+            <td>math-def-inte</td>
+            <td>ll, ul, v</td>
+            <td>ll: 'a', ul: 'b', v: 'x'</td>
+          </tr>
+          <tr>
+            <td>sum</td>
+            <td>math-sum</td>
+            <td>ll, ul, i</td>
+            <td>ll: 'm', ul: 'n', i: 'i'</td>
+          </tr>
+          <tr>
+            <td>product</td>
+            <td>math-prod</td>
+            <td>ll, ul, i</td>
+            <td>ll: 'm', ul: 'n', i: 'i'</td>
+          </tr>
+          <tr>
+            <td>matrix</td>
+            <td>math-matrix</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>matrix row</td>
+            <td>math-row</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="task-list">
+        <li>l = left</li>
+        <li>r = right</li>
+        <li>v = variable</li>
+        <li>p = point</li>
+        <li>ll = lower limit</li>
+        <li>ul = upper limit</li>
+        <li>i = index</li>
+      </ul>
+    </section>
+    <section>
+      <div>
+        <pre><code class="html">&lt;math-elements>&lt;/math-elements></code></pre>
+      </div>
+      <div>
+        n/a
+      </div>
+    </section>
+    <section>
+      <div>
+        <pre><code>&lt;math-el>&lt;/math-el></code></pre>
+      </div>
+      <div>
+        n/a
+      </div>
+    </section>
+    <section>
+      <div>
+        <pre><code>&lt;math-i>&lt;/math-i></code></pre>
+      </div>
+      <div>
+        <math-elements><math-i>e</math-i></math-elements>
+      </div>
+    </section>
+    <section>
+      <div>
+        <pre><code>&lt;math-super>&lt;/math-super></code></pre>
+      </div>
+      <div>
+        <math-elements><math-i>x</math-i><math-super>super</math-super></math-elements>
+      </div>
+    </section>
+    <section>
+      <div>
+        <pre><code>&lt;math-sub>&lt;/math-sub></code></pre>
+      </div>
+      <div>
+        <math-elements><math-i>x</math-i><math-sub>sub</math-sub></math-elements>
+      </div>
+    </section>
+    <section>
+      <div>
+        <pre><code>&lt;math-super-sub>
+  &lt;math-super>&lt;/math-super>
+  &lt;math-sub>&lt;/math-sub>
+&lt;/math-super-sub></code></pre>
+        </div>
+        <div>
+          <math-elements>
+            <math-i>x</math-i>
+            <math-super-sub>
+              <math-super>super</math-super>
+              <math-sub>sub</math-sub>
+            </math-super-sub>
+          </math-elements>
+        </div>
+      </section>
+      <section>
+        <div>
+          <pre><code>&lt;math-lim>&lt;/math-lim></code></pre>
+        </div>
+        <div>
+          <math-elements><math-lim></math-lim></math-elements>
+        </div>
+      </section>
+      <section>
+        <div>
+          <pre><code>&lt;math-frac>
+  &lt;math-el>&lt;/math-el>
+  &lt;math-el>&lt;/math-el>
+&lt;/math-frac></code></pre>
+          </div>
+          <div>
+            <math-elements>
+              <math-frac>
+                <math-el><math-i>a</math-i> + <math-i>b</math-i></math-el>
+                <math-el><math-i>c</math-i></math-el>
+              </math-frac>
+            </math-elements>
+          </div>
+        </section>
+        <section>
+          <div>
+            <pre><code>&lt;math-brack>&lt;/math-brack></code></pre>
+          </div>
+          <div>
+            <math-elements>
+              <math-brack>
+                <math-frac>
+                  <math-el><math-i>a</math-i></math-el>
+                  <math-el><math-i>b</math-i></math-el>
+                </math-frac>
+              </math-brack>
+            </math-elements>
+          </div>
+        </section>
+        <section>
+          <div>
+            <pre><code>&lt;math-deriv>&lt;/math-deriv></code></pre>
+          </div>
+          <div>
+            <math-elements><math-deriv></math-deriv></math-elements>
+          </div>
+        </section>
+        <section>
+          <div>
+            <pre><code>&lt;math-par-deriv>&lt;/math-par-deriv></code></pre>
+          </div>
+          <div>
+            <math-elements><math-par-deriv></math-par-deriv></math-elements>
+          </div>
+        </section>
+        <section>
+          <div>
+            <pre><code>&lt;math-inte>&lt;/math-inte></code></pre>
+          </div>
+          <div>
+            <math-elements><math-inte></math-inte></math-elements>
+          </div>
+        </section>
+        <section>
+          <div>
+            <pre><code>&lt;math-def-inte>&lt;/math-def-inte></code></pre>
+          </div>
+          <div>
+            <math-elements><math-def-inte></math-def-inte></math-elements>
+          </div>
+        </section>
+        <section>
+          <div>
+            <pre><code>&lt;math-sum>&lt;/math-sum></code></pre>
+          </div>
+          <div>
+            <math-elements><math-sum></math-sum></math-elements>
+          </div>
+        </section>
+        <section>
+          <div>
+            <pre><code>&lt;math-prod>&lt;/math-prod></code></pre>
+          </div>
+          <div>
+            <math-elements><math-prod></math-prod></math-elements>
+          </div>
+        </section>
+        <section>
+          <div>
+            <pre><code>&lt;math-brack l="[" r="]">
+  &lt;math-matrix>
+    &lt;math-row>
+      &lt;math-el>&lt;/math-el>&lt;math-el>&lt;/math-el>&lt;math-el>&lt;/math-el>
+    &lt;/math-row>
+    &lt;math-row>
+      &lt;math-el>&lt;/math-el>&lt;math-el>&lt;/math-el>&lt;math-el>&lt;/math-el>
+    &lt;/math-row>
+    &lt;math-row>
+      &lt;math-el>&lt;/math-el>&lt;math-el>&lt;/math-el>&lt;math-el>&lt;/math-el>
+    &lt;/math-row>
+  &lt;/math-matrix>
+&lt;/math-brack></code></pre>
+            </div>
+            <div>
+              <math-elements>
+                <math-brack l="[" r="]">
+                  <math-matrix>
+                    <math-row>
+                      <math-el><math-i>a</math-i><math-sub>1 1</math-sub></math-el><math-el><math-i>a</math-i><math-sub>1 2</math-sub></math-el><math-el><math-i>a</math-i><math-sub>1 3</math-sub></math-el>
+                    </math-row>
+                    <math-row>
+                      <math-el><math-i>a</math-i><math-sub>2 1</math-sub></math-el><math-el><math-i>a</math-i><math-sub>2 2</math-sub></math-el><math-el><math-i>a</math-i><math-sub>2 3</math-sub></math-el>
+                    </math-row>
+                    <math-row>
+                      <math-el><math-i>a</math-i><math-sub>3 1</math-sub></math-el><math-el><math-i>a</math-i><math-sub>3 2</math-sub></math-el><math-el><math-i>a</math-i><math-sub>3 3</math-sub></math-el>
+                    </math-row>
+                  </math-matrix>
+                </math-brack>
+              </math-elements>
+            </div>
+          </section>
+        </article>
+  <article>
+      <h2><a id="examples" href="#examples">Reference</a></h2>
+      <section>
+        <div>
+          <pre><code>&lt;math-elements>
+  &lt;math-lim v="h" p="0">
+    &lt;math-frac>
+      &lt;math-el>
+        ƒ(&lt;math-i>a&lt;/math-i> + &lt;math-i>h&lt;/math-i>) &minus; ƒ(&lt;math-i>a&lt;/math-i>)
+      &lt;/math-el>
+      &lt;math-el>
+        &lt;math-i>h&lt;/math-i>
+      &lt;/math-el>
+    &lt;/math-frac>
+  &lt;/math-lim>
+&lt;/math-elements></code></pre>
+        </div>
+        <div>
+          <math-elements>
+            <math-lim v="h" p="0">
+              <math-frac>
+                <math-el>
+                  ƒ(<math-i>a</math-i> + <math-i>h</math-i>) &minus; ƒ(<math-i>a</math-i>)
+                </math-el>
+                <math-el>
+                  <math-i>h</math-i>
+                </math-el>
+              </math-frac>
+            </math-lim>
+          </math-elements>
+        </div>
+      </section>
+      <section>
+        <div>
+          <pre><code>&lt;math-elements>
+  &lt;math-deriv>
+    &lt;math-brack l="[" r="]">
+      &lt;math-frac>
+        &lt;math-el>
+          ƒ(&lt;math-i>x&lt;/math-i>)
+        &lt;/math-el>
+        &lt;math-el>
+          &lt;math-i>g&lt;/math-i>(&lt;math-i>x&lt;/math-i>)
+        &lt;/math-el>
+      &lt;/math-frac>
+    &lt;/math-brack>
+  &lt;/math-deriv>
+  =
+  &lt;math-frac>
+    &lt;math-el>
+      &lt;math-i>g&lt;/math-i>(&lt;math-i>x&lt;/math-i>)
+      &lt;math-deriv>[ƒ(&lt;math-i>x&lt;/math-i>)]&lt;/math-deriv>
+      &minus;
+      ƒ(&lt;math-i>x&lt;/math-i>)
+      &lt;math-deriv>[&lt;math-i>g&lt;/math-i>(&lt;math-i>x&lt;/math-i>)]&lt;/math-deriv>
+    &lt;/math-el>
+    &lt;math-el>
+      [&lt;math-i>g&lt;/math-i>(&lt;math-i>x&lt;/math-i>)]&lt;math-super>2&lt;/math-super>
+    &lt;/math-el>
+  &lt;/math-frac>
+&lt;/math-elements></code></pre>
+        </div>
+        <div>
+          <math-elements>
+            <math-deriv>
+              <math-brack l="[" r="]">
+                <math-frac>
+                  <math-el>
+                    ƒ(<math-i>x</math-i>)
+                  </math-el>
+                  <math-el>
+                    <math-i>g</math-i>(<math-i>x</math-i>)
+                  </math-el>
+                </math-frac>
+              </math-brack>
+            </math-deriv>
+            =
+            <math-frac>
+              <math-el>
+                <math-i>g</math-i>(<math-i>x</math-i>)
+                <math-deriv>[ƒ(<math-i>x</math-i>)]</math-deriv>
+                &minus;
+                ƒ(<math-i>x</math-i>)
+                <math-deriv>[<math-i>g</math-i>(<math-i>x</math-i>)]</math-deriv>
+              </math-el>
+              <math-el>
+                [<math-i>g</math-i>(<math-i>x</math-i>)]<math-super>2</math-super>
+              </math-el>
+            </math-frac>
+          </math-elements>
+        </div>
+      </section>
+      <section>
+        <div>
+          <pre><code>&lt;math-elements>
+  &lt;math-def-inte>
+    ƒ(&lt;math-i>x&lt;/math-i>)
+  &lt;/math-def-inte>
+  =
+  &lt;math-lim v="n" p="∞">
+    &lt;math-sum ll="1" ul="n">
+      ƒ(&lt;math-i>x&lt;/math-i>
+      &lt;math-super-sub>
+        &lt;math-super>*&lt;/math-super>
+        &lt;math-sub>&lt;math-i>i&lt;/math-i>&lt;/math-sub>
+      &lt;/math-super-sub>)
+      &Delta;&lt;math-i>x&lt;/math-i>
+    &lt;/math-sum>
+  &lt;/math-lim>
+&lt;/math-elements></code></pre>
+        </div>
+        <div>
+          <math-elements>
+            <math-def-inte>
+              ƒ(<math-i>x</math-i>)
+            </math-def-inte>
+            =
+            <math-lim v="n" p="∞">
+              <math-sum ll="1" ul="n">
+                ƒ(<math-i>x</math-i>
+                <math-super-sub>
+                  <math-super>*</math-super>
+                  <math-sub><math-i>i</math-i></math-sub>
+                </math-super-sub>)
+                &Delta;<math-i>x</math-i>
+              </math-sum>
+            </math-lim>
+          </math-elements>
+        </div>
+      </section>
+      <section>
+        <div>
+          <pre><code>&lt;math-elements>
+  &lt;math-sum ll="0" ul="∞" i="n">
+    &lt;math-frac>
+      &lt;math-el>
+        ƒ&lt;math-super>&lt;math-i>n&lt;/math-i>&lt;/math-super>(&lt;math-i>a&lt;/math-i>)
+      &lt;/math-el>
+      &lt;math-el>
+        &lt;math-i>n&lt;/math-i>!
+      &lt;/math-el>
+    &lt;/math-frac>
+    (&lt;math-i>x&lt;/math-i> &minus; &lt;math-i>a&lt;/math-i>)&lt;math-super>&lt;math-i>n&lt;/math-i>&lt;/math-super>
+  &lt;/math-sum>
+&lt;/math-elements></code></pre>
+        </div>
+        <div>
+          <math-elements>
+            <math-sum ll="0" ul="∞" i="n">
+              <math-frac>
+                <math-el>
+                  ƒ<math-super><math-i>n</math-i></math-super>(<math-i>a</math-i>)
+                </math-el>
+                <math-el>
+                  <math-i>n</math-i>!
+                </math-el>
+              </math-frac>
+              (<math-i>x</math-i> &minus; <math-i>a</math-i>)<math-super><math-i>n</math-i></math-super>
+            </math-sum>
+          </math-elements>
+        </div>
+      </section>
+      <section>
+        <div>
+          <pre><code>&lt;math-elements>
+  &lt;math-inte v="t">
+    &lt;math-frac>
+      &lt;math-el>
+        5 &lt;math-i>e&lt;/math-i>&lt;math-super>tan
+        &lt;math-super>&minus; 1&lt;/math-super>(&lt;math-i>t&lt;/math-i>)&lt;/math-super>
+      &lt;/math-el>
+      &lt;math-el>
+        4 (&lt;math-i>t&lt;/math-i>&lt;math-super>2&lt;/math-super> + 1)
+      &lt;/math-el>
+    &lt;/math-frac>
+  &lt;/math-inte>
+&lt;/math-elements></code></pre>
+        </div>
+        <div>
+          <math-elements>
+            <math-inte v="t">
+              <math-frac>
+                <math-el>
+                  5 <math-i>e</math-i><math-super>tan
+                  <math-super>&minus; 1</math-super>(<math-i>t</math-i>)</math-super>
+                </math-el>
+                <math-el>
+                  4 (<math-i>t</math-i><math-super>2</math-super> + 1)
+                </math-el>
+              </math-frac>
+            </math-inte>
+          </math-elements>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer><small>© 2014 Charbel Rami. All rights reserved. Source code licensed under the MIT License.</small></footer>
+  <script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6:all;source-code-pro:n2,n4,n9:all.js"></script>
+  </body>
+</html>

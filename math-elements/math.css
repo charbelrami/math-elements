@@ -1,0 +1,89 @@
+math-elements {
+  line-height: 1;
+}
+
+math-super {
+  vertical-align: super;
+}
+
+math-sub {
+  vertical-align: sub;
+}
+
+math-super, math-sub, body /deep/ .math-adjust-margin {
+  margin-left: -.2em;
+}
+
+math-super-sub, body /deep/ math-frac, body /deep/ .math-col {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  vertical-align: middle;
+}
+
+body /deep/ .math-ver-align-mid {
+  vertical-align: middle;
+}
+
+body /deep/ math-frac > math-el, body /deep/ .math-col {
+  text-align: center;
+}
+
+body /deep/ math-frac > math-el:first-child {
+  border-bottom: 1px solid #000;
+}
+
+body /deep/ math-frac > math-el:last-child {
+  border-top: 1px solid #000;
+}
+
+math-brack {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+}
+
+math-super, math-sub, body /deep/ .math-font-small {
+  font-size: .8em;
+}
+
+body /deep/ .math-font-large {
+  font-size: 1.4em;
+}
+
+body /deep/ .math-font-light {
+  font-weight: 300;
+}
+
+body /deep/ .math-font-x-light {
+  font-weight: 200;
+}
+
+math-i, body /deep/ .math-i {
+  display: inline-block;
+  font-style: italic;
+  margin-left: -.05em;
+  margin-right: -.05em;
+}
+
+math-matrix {
+  display: inline-table;
+}
+
+math-row {
+  display: table-row;
+}
+
+math-row > math-el {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: .5rem;
+}

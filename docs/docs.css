@@ -1,0 +1,63 @@
+th, td {
+  padding: 10px;
+  border: 1px solid #d3d3d3;
+}
+
+header, main, footer {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+body, math-elements {
+  font-family: source-sans-pro, sans-serif;
+  color: #222;
+}
+
+math-elements {
+  font-size: 1.1rem;
+}
+
+code, h1, .logo {
+  font-family: source-code-pro, monospace;
+}
+
+pre {
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-size: .8rem;
+}
+
+article, section {
+  padding: 20px;
+}
+
+section {
+  border-bottom: 1px dotted #d3d3d3;
+}
+
+section:last-child {
+  border-bottom: 0;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.logo {
+  font-size: 3.1rem;
+  font-weight: 200;
+}
+
+footer {
+  background-color: #444;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}

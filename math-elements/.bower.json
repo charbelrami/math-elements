@@ -1,0 +1,36 @@
+{
+  "name": "math-elements",
+  "version": "0.2.1",
+  "authors": [
+    "Charbel Rami"
+  ],
+  "description": "display mathematical expressions using custom elements",
+  "keywords": [
+    "math",
+    "custom-elements",
+    "polymer-elements",
+    "web-components"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/charbelrami/math-elements",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.4.1"
+  },
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.1",
+    "commit": "a6d9184e9a258c9885812795e67bdbc6e76fa2ce"
+  },
+  "_source": "git://github.com/charbelrami/math-elements.git",
+  "_target": "~0.2.1",
+  "_originalSource": "math-elements",
+  "_direct": true
+}

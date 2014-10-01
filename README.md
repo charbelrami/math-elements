@@ -2,6 +2,8 @@
 
 ## Getting started
 
+Currently full supported only in Chrome
+
 ### Installation
 
 #### Bower

@@ -1,0 +1,187 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="stylesheet" href="math.css">
+
+<polymer-element name="math-elements" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>
+
+<polymer-element name="math-el" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>
+
+<polymer-element name="math-i" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>
+
+<polymer-element name="math-super" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>
+
+<polymer-element name="math-sub" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>
+
+<polymer-element name="math-super-sub" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>
+
+<polymer-element name="math-frac" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>
+
+<polymer-element name="math-brack" attributes="l r">
+  <template>
+    <span class="math-font-x-light" style="font-size: {{fs}}">{{l}}</span>
+    <content></content>
+    <span class="math-font-x-light" style="font-size: {{fs}}">{{r}}</span>
+  </template>
+  <script>
+    Polymer({
+      l: '(',
+      r: ')',
+      domReady: function () {
+        this.fs = parseInt(window.getComputedStyle(this).height, 10) + 'px';
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="math-inte" attributes="v">
+  <template>
+    <span class="math-font-large math-ver-align-mid">&int;</span>
+    <span><content></content></span>
+    <span class="math-i">d{{v}}</span>
+  </template>
+  <script>
+    Polymer({
+      v: 'x'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="math-def-inte" attributes="ll ul v">
+  <template>
+    <span class="math-col">
+      <span class="math-font-small">{{ul}}</span>
+      <span class="math-font-large">&int;</span>
+      <span class="math-font-small">{{ll}}</span>
+    </span>
+    <span><content></content></span>
+    <span class="math-i">d{{v}}</span>
+  </template>
+  <script>
+    Polymer({
+      ll: 'a',
+      ul: 'b',
+      v: 'x'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="math-sum" attributes="ll ul i">
+  <template>
+    <span class="math-col">
+      <span class="math-font-small">{{ul}}</span>
+      <span class="math-font-large">&sum;</span>
+      <span class="math-font-small"><span class="math-i">{{i}}</span> = {{ll}}</span>
+    </span>
+    <span class="math-adjust-margin"><content></content></span>
+  </template>
+  <script>
+    Polymer({
+      ll: 'm',
+      ul: 'n',
+      i: 'i'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="math-prod" attributes="ll ul i">
+  <template>
+    <span class="math-col">
+      <span class="math-font-small">{{ul}}</span>
+      <span class="math-font-large">&prod;</span>
+      <span class="math-font-small"><span class="math-i">{{i}}</span> = {{ll}}</span>
+    </span>
+    <span class="math-adjust-margin"><content></content></span>
+  </template>
+  <script>
+    Polymer({
+      ll: 'm',
+      ul: 'n',
+      i: 'i'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="math-deriv" attributes="v">
+  <template>
+    <math-frac>
+      <math-el class="math-i">d</math-el>
+      <math-el class="math-i">d{{v}}</math-el>
+    </math-frac>
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      v: 'x'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="math-par-deriv" attributes="v">
+  <template>
+    <math-frac>
+      <math-el class="math-i">&part;</math-el>
+      <math-el class="math-i">&part;{{v}}</math-el>
+    </math-frac>
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      v: 'x'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="math-lim" attributes="v p">
+  <template>
+    <span class="math-col">
+      <span>lim</span>
+      <span class="math-font-small"><span class="math-i">{{v}}</span> &rarr; {{p}}</span>
+    </span>
+    <span><content></content></span>
+  </template>
+  <script>
+    Polymer({
+      v: 'x',
+      p: 'a'
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="math-matrix" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>
+
+<polymer-element name="math-row" noscript>
+  <template>
+    <content></content>
+  </template>
+</polymer-element>

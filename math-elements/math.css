@@ -17,9 +17,12 @@ math-super, math-sub, body /deep/ .math-adjust-margin {
 math-super-sub, body /deep/ math-frac, body /deep/ .math-col {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
           flex-direction: column;
   vertical-align: middle;
 }
@@ -43,9 +46,11 @@ body /deep/ math-frac > math-el:last-child {
 math-brack {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
+          -webkit-box-align: center;
           align-items: center;
   vertical-align: middle;
 }
